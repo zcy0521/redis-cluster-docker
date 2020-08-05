@@ -26,7 +26,7 @@ sudo docker-compose down
 - 连接
 
 ```shell script
-redis-cli -h 192.168.3.3 -p 7000
+redis-cli -c -h 192.168.3.3 -p 7000
 ```
 
 ## Docker
