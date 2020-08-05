@@ -20,8 +20,7 @@ sudo docker exec -it redis-cluster-1 redis-cli --cluster create 192.168.3.3:7000
 - 删除
 
 ```shell script
-sudo docker-compose stop
-sudo docker-compose rm
+sudo docker-compose down
 ```
 
 - 连接
