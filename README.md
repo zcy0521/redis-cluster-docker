@@ -6,7 +6,7 @@
 
 ```shell script
 git clone https://github.com/zcy0521/redis-cluster-docker.git
-cd nginx-docker
+cd redis-cluster-docker
 sudo docker-compose up -d
 sudo docker-compose ps
 ```
