@@ -10,7 +10,18 @@ services:
       - 17000:16379
     volumes:
       - ./data/7000:/data
-    command: [redis-server, '--appendonly yes', '--logfile redis.log', '--cluster-enabled yes', '--cluster-config-file nodes.conf', '--cluster-node-timeout 5000', '--cluster-announce-ip 192.168.3.3', '--cluster-announce-port 7000', '--cluster-announce-bus-port 17000']
+    environment:
+      - CLUSTER_ANNOUNCE_PORT=7000
+      - CLUSTER_ANNOUNCE_BUS_PORT=17000
+    command: [
+      '--appendonly ${REDIS_APPENDONLY}',
+      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
+      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      '--cluster-announce-ip ${HOST_IP}',
+      '--cluster-announce-port ${CLUSTER_ANNOUNCE_PORT}',
+      '--cluster-announce-bus-port ${CLUSTER_ANNOUNCE_BUS_PORT}'
+    ]
 
   redis-cluster-2:
     image: redis
@@ -21,7 +32,18 @@ services:
       - 17001:16379
     volumes:
       - ./data/7001:/data
-    command: [redis-server, '--appendonly yes', '--logfile redis.log', '--cluster-enabled yes', '--cluster-config-file nodes.conf', '--cluster-node-timeout 5000', '--cluster-announce-ip 192.168.3.3', '--cluster-announce-port 7001', '--cluster-announce-bus-port 17001']
+    environment:
+      - CLUSTER_ANNOUNCE_PORT=7001
+      - CLUSTER_ANNOUNCE_BUS_PORT=17001
+    command: [
+      '--appendonly ${REDIS_APPENDONLY}',
+      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
+      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      '--cluster-announce-ip ${HOST_IP}',
+      '--cluster-announce-port ${CLUSTER_ANNOUNCE_PORT}',
+      '--cluster-announce-bus-port ${CLUSTER_ANNOUNCE_BUS_PORT}'
+    ]
 
   redis-cluster-3:
     image: redis
@@ -32,7 +54,18 @@ services:
       - 17002:16379
     volumes:
       - ./data/7002:/data
-    command: [redis-server, '--appendonly yes', '--logfile redis.log', '--cluster-enabled yes', '--cluster-config-file nodes.conf', '--cluster-node-timeout 5000', '--cluster-announce-ip 192.168.3.3', '--cluster-announce-port 7002', '--cluster-announce-bus-port 17002']
+    environment:
+      - CLUSTER_ANNOUNCE_PORT=7002
+      - CLUSTER_ANNOUNCE_BUS_PORT=17002
+    command: [
+      '--appendonly ${REDIS_APPENDONLY}',
+      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
+      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      '--cluster-announce-ip ${HOST_IP}',
+      '--cluster-announce-port ${CLUSTER_ANNOUNCE_PORT}',
+      '--cluster-announce-bus-port ${CLUSTER_ANNOUNCE_BUS_PORT}'
+    ]
 
   redis-cluster-4:
     image: redis
@@ -43,7 +76,18 @@ services:
       - 17003:16379
     volumes:
       - ./data/7003:/data
-    command: [redis-server, '--appendonly yes', '--logfile redis.log', '--cluster-enabled yes', '--cluster-config-file nodes.conf', '--cluster-node-timeout 5000', '--cluster-announce-ip 192.168.3.3', '--cluster-announce-port 7003', '--cluster-announce-bus-port 17003']
+    environment:
+      - CLUSTER_ANNOUNCE_PORT=7003
+      - CLUSTER_ANNOUNCE_BUS_PORT=17003
+    command: [
+      '--appendonly ${REDIS_APPENDONLY}',
+      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
+      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      '--cluster-announce-ip ${HOST_IP}',
+      '--cluster-announce-port ${CLUSTER_ANNOUNCE_PORT}',
+      '--cluster-announce-bus-port ${CLUSTER_ANNOUNCE_BUS_PORT}'
+    ]
 
   redis-cluster-5:
     image: redis
@@ -54,7 +98,18 @@ services:
       - 17004:16379
     volumes:
       - ./data/7004:/data
-    command: [redis-server, '--appendonly yes', '--logfile redis.log', '--cluster-enabled yes', '--cluster-config-file nodes.conf', '--cluster-node-timeout 5000', '--cluster-announce-ip 192.168.3.3', '--cluster-announce-port 7004', '--cluster-announce-bus-port 17004']
+    environment:
+      - CLUSTER_ANNOUNCE_PORT=7004
+      - CLUSTER_ANNOUNCE_BUS_PORT=17004
+    command: [
+      '--appendonly ${REDIS_APPENDONLY}',
+      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
+      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      '--cluster-announce-ip ${HOST_IP}',
+      '--cluster-announce-port ${CLUSTER_ANNOUNCE_PORT}',
+      '--cluster-announce-bus-port ${CLUSTER_ANNOUNCE_BUS_PORT}'
+    ]
 
   redis-cluster-6:
     image: redis
@@ -65,4 +120,15 @@ services:
       - 17005:16379
     volumes:
       - ./data/7005:/data
-    command: [redis-server, '--appendonly yes', '--logfile redis.log', '--cluster-enabled yes', '--cluster-config-file nodes.conf', '--cluster-node-timeout 5000', '--cluster-announce-ip 192.168.3.3', '--cluster-announce-port 7005', '--cluster-announce-bus-port 17005']
+    environment:
+      - CLUSTER_ANNOUNCE_PORT=7005
+      - CLUSTER_ANNOUNCE_BUS_PORT=7005
+    command: [
+      '--appendonly ${REDIS_APPENDONLY}',
+      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
+      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      '--cluster-announce-ip ${HOST_IP}',
+      '--cluster-announce-port ${CLUSTER_ANNOUNCE_PORT}',
+      '--cluster-announce-bus-port ${CLUSTER_ANNOUNCE_BUS_PORT}'
+    ]
