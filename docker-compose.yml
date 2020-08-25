@@ -12,9 +12,10 @@ services:
       - ./data/7000:/data
     command: [
       '--appendonly ${REDIS_APPENDONLY}',
-      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
-      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
-      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      # CLUSTER
+      '--cluster-enabled ${CLUSTER_ENABLED}',
+      '--cluster-config-file ${CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${CLUSTER_NODE_TIMEOUT}',
       # CLUSTER DOCKER/NAT
       '--cluster-announce-ip ${HOST_IP}',
       '--cluster-announce-port 7000',
@@ -32,9 +33,10 @@ services:
       - ./data/7001:/data
     command: [
       '--appendonly ${REDIS_APPENDONLY}',
-      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
-      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
-      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      # CLUSTER
+      '--cluster-enabled ${CLUSTER_ENABLED}',
+      '--cluster-config-file ${CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${CLUSTER_NODE_TIMEOUT}',
       # CLUSTER DOCKER/NAT
       '--cluster-announce-ip ${HOST_IP}',
       '--cluster-announce-port 7001',
@@ -52,9 +54,10 @@ services:
       - ./data/7002:/data
     command: [
       '--appendonly ${REDIS_APPENDONLY}',
-      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
-      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
-      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      # CLUSTER
+      '--cluster-enabled ${CLUSTER_ENABLED}',
+      '--cluster-config-file ${CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${CLUSTER_NODE_TIMEOUT}',
       # CLUSTER DOCKER/NAT
       '--cluster-announce-ip ${HOST_IP}',
       '--cluster-announce-port 7002',
@@ -72,9 +75,10 @@ services:
       - ./data/7003:/data
     command: [
       '--appendonly ${REDIS_APPENDONLY}',
-      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
-      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
-      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      # CLUSTER
+      '--cluster-enabled ${CLUSTER_ENABLED}',
+      '--cluster-config-file ${CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${CLUSTER_NODE_TIMEOUT}',
       # CLUSTER DOCKER/NAT
       '--cluster-announce-ip ${HOST_IP}',
       '--cluster-announce-port 7003',
@@ -92,9 +96,10 @@ services:
       - ./data/7004:/data
     command: [
       '--appendonly ${REDIS_APPENDONLY}',
-      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
-      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
-      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      # CLUSTER
+      '--cluster-enabled ${CLUSTER_ENABLED}',
+      '--cluster-config-file ${CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${CLUSTER_NODE_TIMEOUT}',
       # CLUSTER DOCKER/NAT
       '--cluster-announce-ip ${HOST_IP}',
       '--cluster-announce-port 7004',
@@ -112,9 +117,10 @@ services:
       - ./data/7005:/data
     command: [
       '--appendonly ${REDIS_APPENDONLY}',
-      '--cluster-enabled ${REDIS_CLUSTER_ENABLED}',
-      '--cluster-config-file ${REDIS_CLUSTER_CONFIG_FILE}',
-      '--cluster-node-timeout ${REDIS_CLUSTER_NODE_TIMEOUT}',
+      # CLUSTER
+      '--cluster-enabled ${CLUSTER_ENABLED}',
+      '--cluster-config-file ${CLUSTER_CONFIG_FILE}',
+      '--cluster-node-timeout ${CLUSTER_NODE_TIMEOUT}',
       # CLUSTER DOCKER/NAT
       '--cluster-announce-ip ${HOST_IP}',
       '--cluster-announce-port 7005',
