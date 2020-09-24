@@ -14,7 +14,7 @@ sudo docker-compose ps
 - 创建集群
 
 ```shell script
-sudo docker exec -it redis-cluster-1 redis-cli --cluster create 192.168.3.2:7000 192.168.3.2:7001 192.168.3.2:7002 192.168.3.2:7003 192.168.3.2:7004 192.168.3.2:7005 --cluster-replicas 1
+sudo docker exec -it redis-cluster-1 redis-cli --cluster create 192.168.20.2:7000 192.168.20.2:7001 192.168.20.2:7002 192.168.20.2:7003 192.168.20.2:7004 192.168.20.2:7005 --cluster-replicas 1
 ```
 
 - 删除
